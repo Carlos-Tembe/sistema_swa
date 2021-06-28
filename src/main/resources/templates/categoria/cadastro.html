@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lista</title>	
+	<meta charset="utf-8">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	
+	<!-- Bootstrap core CSS -->
+	<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/webjars/open-iconic/font/css/open-iconic-bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+	<section class="layout-content">
+		<div class="container" id="categoria">
+			 <form th:action="@{/categorias/guardar}" th:object="${categoria}" method="POST">	
+			 	<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="nome">Nome: </label>
+						<input type="text" class="form-control" id="nome" placeholder="Nome categoria" autofocus="autofocus" th:field="*{nome}">
+					</div>					
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="nome">Descricao: </label>
+						<input type="text" class="form-control"  id="nome" placeholder="Descricao categoria" autofocus="autofocus" th:field="*{descricao}">
+					</div>					
+				</div>
+				
+				<input type="hidden" id="id"/>
+				<button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
+			</form>
+		</div>		
+	</section>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+	<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
